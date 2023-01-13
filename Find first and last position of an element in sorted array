@@ -1,0 +1,22 @@
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+       int index1 = -1;
+       int index2 = -1;
+       int[] newArr = new int[2];
+       for(int i = 0; i<nums.length; i++){
+           if(nums[i] == target){
+               index1 = i;
+               break;
+           }
+       }
+         for(int j = nums.length - 1; j>=0; j--){
+             if(nums[j] == target){
+                 index2 = j;
+                 break;
+             }
+        }
+        newArr[0] = index1;
+        newArr[1] = index2;
+        return newArr;
+        }
+    }
