@@ -1,0 +1,28 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+
+        // Two-Pointer Approach
+        
+        
+        // Step1: Convert the integer into string.
+        // Step2: Point two variable at first and last indices of the string.
+        // Step3: Compare the characters at those indices.
+        // Step4: Update the variables.
+
+        String s = String.valueOf(x);  // convert integer to string.
+
+        int i = 0;                     // i will initially point to first index.
+        int j = s.length() - 1;        // j will initially point to last index. 
+        
+
+        while(i <= j)                   // loop will break when i and j cross each other
+        {
+            if(s.charAt(i) != s.charAt(j)) 
+                return false;
+            i++;                                // i is incremented.
+            j--;                                // j is decremented.
+        }
+        return true;
+        
+    }
+}
